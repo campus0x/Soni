@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+
+<body>
+<header>
+  <nav class="nav-container">
+  <div class="logo"> 
+    <img src="" alt="4" srcset="">
+  </div>
+
+  <div class="nav-links">
+    <a href="https://example.com/product">calendar</a>
+    <a href="https://example.com/pricing">reference</a>
+    <a href="https://example.com/customers">compliant-box</a>
+  </div>
+
+  <div class="menu-btn" id="menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="https://example.com/product">calendar</a>
+  <a href="https://example.com/pricing">reference</a>
+  <a href="https://example.com/customers">compliant-box</a>
+  <!-- <a href="https://example.com/blog">Blog</a>
+  <a href="https://example.com/about">Company</a> -->
+</div>
+</header>
+    <div class="hero">
+    <div class="hero-left">
+      <h1>CampUs 0x :</h1>
+      <p>College of Commerce,Arts and Science</p>
+      <div class="quotes" id="quote"></div>
+    </div>
+  
+  </div>
+  <style>
+
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Inter:wght@400;600&display=swap');
+
+
+    .hero-left {
+      flex: 1;
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-left h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #8974dd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+
+    }
+
+    .hero-left p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      color: #cfcfcf;
+      line-height: 1.6;
+    }
+
+    .quotes {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #cfdcdb;
+     
+      border-right: 3px solid #41d909;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3s steps(30, end) infinite, blink 0.8s step-end infinite alternate;
+    }
+
+    @keyframes typing {
+      0% { width: 0 }
+      50% { width: 100% }
+      100% { width: 0 }
+    }
+
+    @keyframes blink {
+      from { border-color: transparent }
+     
+    }
+</style>
+    <script>
+    const quotes = [
+      "Unlock knowledge like never before.",
+      "Your gateway to decentralized libraries.",
+      "Where ideas meet innovation.",
+      "Read. Share. Empower.",
+      "Future of learning starts here."
+    ];
+
+    let i = 0;
+    const quoteElement = document.getElementById("quote");
+
+    function showQuote() {
+      quoteElement.textContent = quotes[i];
+      i = (i + 1) % quotes.length;
+    }
+
+    setInterval(showQuote, 3000);
+    showQuote();
+  </script>
+
+  <div class="stage" role="main" aria-label="Royal Noir background demo">
+    <!-- background layers (z-index 0) -->
+    <div class="bg-layers" aria-hidden="true">
+      <div class="layer-gradients"></div>
+      <div class="layer-shimmer"></div>
+      <div class="layer-noise"></div>
+    </div>
+
+    
+    <!-- particle canvas (z-index 0) -->
+    <canvas id="particle-canvas" width="1600" height="900" aria-hidden="true"></canvas>
+
+
+  
+
+    <!-- content (z-index 1) -->
+    <article class="glass" role="article">
+      <section class="hero">
+        <h1>Royal Noir — Brilliant Black Canvas</h1>
+        <p class="lead">A modern, textured black-screen background using layered gradients, glass surfaces and subtle
+          motion — tuned to feel elegant and powerful. Use the icons and swatch as quick assets for your UI.</p>
+        <div class="icon-row" aria-hidden="false">
+          <!-- Inline SVG icons (feather-like, stroked with gradient) -->
+          <div class="icon-btn" title="Search">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1">
+                  <stop offset="0" stop-color="#00d4ff" />
+                  <stop offset="1" stop-color="#7b2cff" />
+                </linearGradient>
+                <linearGradient id="g2" x1="0" x2="1">
+                  <stop offset="0" stop-color="#ffd166" />
+                  <stop offset="1" stop-color="#7b2cff" />
+                </linearGradient>
+                <linearGradient id="gradStroke" x1="0" x2="1">
+                  <stop offset="0" stop-color="#00d4ff" />
+                  <stop offset="0.5" stop-color="#7b2cff" />
+                  <stop offset="1" stop-color="#ffd166" />
+                </linearGradient>
+              </defs>
+              <circle cx="11" cy="11" r="6"></circle>
+              <path d="M21 21l-4.35-4.35"></path>
+            </svg>
+          </div>
+
+          <div class="icon-btn" title="Profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <circle cx="12" cy="8" r="3.2"></circle>
+              <path d="M4.5 20.2c1.7-3.6 5.5-5.5 9.5-5.5s7.8 1.9 9.5 5.5"></path>
+            </svg>
+          </div>
+
+          <div class="icon-btn" title="Settings">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"></path>
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06c.2.2.15.54-.11.66a2 2 0 0 1-2.09 0l-.12-.07a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2h-.36a2 2 0 0 1-2-2v-.12a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.12.07a2 2 0 0 1-2.09 0c-.26-.12-.31-.46-.11-.66l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2v-.36a2 2 0 0 1 2-2h.12a1.65 1.65 0 0 0 1.51-1c.15-.53.01-1.1-.33-1.52l-.07-.12a2 2 0 0 1 0-2.09c.12-.26.46-.31.66-.11l.06.06a1.65 1.65 0 0 0 1.82.33h.01c.53-.15 1.1-.01 1.51.33.32.33.32.86.32 1.52V3a2 2 0 0 1 2-2h.36a2 2 0 0 1 2 2v.12c0 .66.37 1.18 1 1.5.51.28 1.12.14 1.52-.33.08-.11.16-.23.25-.34">
+              </path>
+            </svg>
+          </div>
+        </div>
+        <div style="height:18px"></div>
+        <a class="cta" href="#" role="button">Use this palette</a>
+      </section>
+
+      <aside class="preview" aria-label="Color preview">
+        <div class="swatch" role="img" aria-label="royal gradient swatch"></div>
+        <div style="display:flex; gap:10px; align-items:center;">
+          <div style="flex:1">
+            <strong style="display:block">Royal Mix</strong>
+            <small style="color:rgba(235,240,255,0.6)">Purple • Cerulean • Gold</small>
+          </div>
+          <div style="text-align:right; color:rgba(235,240,255,0.6)">
+            <small>Perfect for highlights</small>
+          </div>
+        </div>
+      </aside>
+    </article>
+  </div>
+
+  
+  
+  <style>
+   
+    .sect {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      padding: 100px 10%;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .sect:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .cont {
+      flex: 1;
+      min-width: 300px;
+      z-index: 2;
+    }
+
+    .ico {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #ff6ec4, #7873f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .ttl {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fad390, #a1c4fd, #c2e9fb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 4s ease-in-out infinite alternate;
+    }
+
+    .desc {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #ddd;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .animtxt {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #fff;
+      border-right: 3px solid #ffdf6c;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      min-height: 35px;
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% { border-color: #ffdf6c; }
+      51%, 100% { border-color: transparent; }
+    }
+
+    .medwrap {
+      border-radius: 24px;
+      overflow: hidden;
+      flex: 1;
+      min-width: 320px;
+      max-width: 600px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      transform: perspective(1000px) rotateY(-5deg);
+      transition: transform 0.6s ease;
+    }
+
+    .medwrap:hover {
+      transform: perspective(1000px) rotateY(5deg) scale(1.03);
+    }
+
+    video {
+      width: 100%;
+      display: block;
+    }
+
+    /* Glow Animation */
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px rgba(255,255,255,0.2); }
+      100% { text-shadow: 0 0 30px rgba(255,255,255,0.8); }
+    }
+
+    /* Floating effect */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+  </style>
+
+
+  <!-- Section 1 -->
+  <div class="sect">
+    <div class="cont">
+      <div class="ico">📜</div>
+      <div class="ttl">Eternal Era of Wisdom</div>
+      <div class="desc">
+        In the whispers of ancient verses, in the strategies that shaped empires, and in the equations written among the stars — the eternal minds of Valmiki, Chanakya, Aryabhatta, and Vatsyayana still breathe wisdom into the ages.
+      </div>
+      <div class="animtxt" data-phrases='["Valmiki – Voice of Dharma", "Chanakya – Weaver of Empires", "Aryabhatta – Astronomer of Infinity", "Vatsyayana – Philosopher of Desire"]'></div>
+    </div>
+    <div class="medwrap">
+      <video autoplay muted loop>
+        <source src="new/assets_videos/988f34a5-a404-446f-bd00-a3838681a107.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="sect">
+    <div class="cont">
+      <div class="ico">🙏</div>
+      <div class="ttl">Infinite Spiritual Power</div>
+      <div class="desc">
+        From the lotus of compassion to the flames of truth, from silent renunciation to fearless courage — the souls of Buddha, Mahavira, and Guru Gobind Singh Ji Maharaj rise like eternal beacons for humanity.
+      </div>
+      <div class="animtxt" data-phrases='["Buddha – Path of Enlightenment", "Mahavira – Silence of Liberation", "Guru Gobind Singh – Courage of the Khalsa"]'></div>
+    </div>
+    <div class="medwrap">
+      <video autoplay muted loop>
+        <source src="new/assets_videos/Generated video 1.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="sect">
+    <div class="cont">
+      <div class="ico">🎓</div>
+      <div class="ttl">Era of Intelligence</div>
+      <div class="desc">
+        When wisdom gathered in great halls, when seekers crossed oceans for knowledge — Nalanda, Vikramshila, Rajgriha, and Taregana became sanctuaries where the fire of curiosity never dimmed.
+      </div>
+      <div class="animtxt" data-phrases='["Nalanda – Light of Learning", "Vikramshila – Temple of Knowledge", "Rajgriha – Seat of Scholars", "Taregana – Stars of Aryabhata"]'></div>
+    </div>
+    <div class="medwrap">
+      <video autoplay muted loop>
+        <source src="new/assets_videos/Generated File August 31, 2025 - 11_42PM.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="sect">
+    <div class="cont">
+      <div class="ico">🌍</div>
+      <div class="ttl">Hubs of Kingdoms & Trade</div>
+      <div class="desc">
+        Ashoka’s wheels rolled across continents, the Grand Trunk Road pulsed with voices of merchants, and trade winds carried India’s spirit to the corners of the earth — weaving a web of exchange, culture, and empire.
+      </div>
+      <div class="animtxt" data-phrases='["Ashoka – Flame of Expansion", "Ancient Trade Routes", "Grand Trunk Road – Artery of Civilizations"]'></div>
+    </div>
+    <div class="medwrap">
+      <video autoplay muted loop>
+        <source src="new/assets_videos/Generated File August 31, 2025 - 11_45PM.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="sect">
+    <div class="cont">
+      <div class="ico">🌟</div>
+      <div class="ttl">Legacy of Timeless Heritage</div>
+      <div class="desc">
+        The rivers of thought, the mountains of faith, and the skies of discovery converge here — a civilization eternal, whispering to the world that wisdom is not past but presence everlasting.
+      </div>
+      <div class="animtxt" data-phrases='["Wisdom Beyond Time", "Heritage that Breathes", "India – Eternal Light"]'></div>
+    </div>
+    <div class="medwrap">
+      <video autoplay muted loop>
+        <source src="new/assets_videos/Generated File August 31, 2025 - 11_50PM.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <script>
+    // Typing Animation
+    function typeEffect(el, phrases) {
+      let i = 0, j = 0, currentPhrase = [], isDeleting = false;
+
+      function loop() {
+        el.innerHTML = currentPhrase.join('');
+
+        if (!isDeleting && j < phrases[i].length) {
+          currentPhrase.push(phrases[i][j]);
+          j++;
+        } else if (isDeleting && j > 0) {
+          currentPhrase.pop();
+          j--;
+        }
+
+        if (j === phrases[i].length) {
+          isDeleting = true;
+          setTimeout(loop, 1500); 
+          return;
+        }
+
+        if (isDeleting && j === 0) {
+          isDeleting = false;
+          i++;
+          if (i === phrases.length) i = 0;
+        }
+
+        const speed = isDeleting ? 50 : 100;
+        setTimeout(loop, speed);
+      }
+
+      loop();
+    }
+
+    document.querySelectorAll('.animtxt').forEach(el => {
+      const phrases = JSON.parse(el.getAttribute('data-phrases'));
+      typeEffect(el, phrases);
+    });
+  </script>
+
+
+  <app-card-grid _ngcontent-ng-c451368777="" _nghost-ng-c1387343142="">
+    <div _ngcontent-ng-c1387343142="" class="container">
+      <div _ngcontent-ng-c4100353587="" class="card">
+        <div _ngcontent-ng-c4100353587="" class="content">
+          <div _ngcontent-ng-c4100353587="" class="icon-circle"><app-material-icon _ngcontent-ng-c4100353587=""
+              size="2.85rem" class="icon" _nghost-ng-c3002024481=""><mat-icon _ngcontent-ng-c3002024481="" role="img"
+                aria-hidden="true" class="mat-icon notranslate icon google-symbols mat-icon-no-color"
+                data-mat-icon-type="font" style="--icon-font-size: 2.85rem; --font-font-weight: 200; --icon-filled: 0;">
+                school
+              </mat-icon></app-material-icon></div><!----><!---->
+          <div _ngcontent-ng-c4100353587="" class="title mat-headline-small">Power study</div>
+          <div _ngcontent-ng-c4100353587="" class="description mat-body-large">Upload lecture recordings, textbook
+            chapters, and research papers. Ask NotebookLM to explain complex concepts in simple terms, provide
+            real-world examples, and reinforce your understanding.</div>
+        </div><!----><span _ngcontent-ng-c4100353587="" class="cta">Learn faster and deeper.</span><!---->
+      </div><!---->
+      <div _ngcontent-ng-c4100353587="" class="card">
+        <div _ngcontent-ng-c4100353587="" class="content">
+          <div _ngcontent-ng-c4100353587="" class="icon-circle"><app-material-icon _ngcontent-ng-c4100353587=""
+              size="2.85rem" class="icon" _nghost-ng-c3002024481=""><mat-icon _ngcontent-ng-c3002024481="" role="img"
+                aria-hidden="true" class="mat-icon notranslate icon google-symbols mat-icon-no-color"
+                data-mat-icon-type="font" style="--icon-font-size: 2.85rem; --font-font-weight: 200; --icon-filled: 0;">
+                dynamic_feed
+              </mat-icon></app-material-icon></div><!----><!---->
+          <div _ngcontent-ng-c4100353587="" class="title mat-headline-small">Organize your thinking</div>
+          <div _ngcontent-ng-c4100353587="" class="description mat-body-large">Upload your source material and let
+            NotebookLM create a polished presentation outline, complete with key talking points and supporting evidence.
+          </div>
+        </div><!----><span _ngcontent-ng-c4100353587="" class="cta">Present with confidence.</span><!---->
+      </div><!---->
+      <div _ngcontent-ng-c4100353587="" class="card">
+        <div _ngcontent-ng-c4100353587="" class="content">
+          <div _ngcontent-ng-c4100353587="" class="icon-circle"><app-material-icon _ngcontent-ng-c4100353587=""
+              size="2.85rem" class="icon" _nghost-ng-c3002024481=""><mat-icon _ngcontent-ng-c3002024481="" role="img"
+                aria-hidden="true" class="mat-icon notranslate icon google-symbols mat-icon-no-color"
+                data-mat-icon-type="font" style="--icon-font-size: 2.85rem; --font-font-weight: 200; --icon-filled: 0;">
+                lightbulb
+              </mat-icon></app-material-icon></div><!----><!---->
+          <div _ngcontent-ng-c4100353587="" class="title mat-headline-small">Spark new ideas</div>
+          <div _ngcontent-ng-c4100353587="" class="description mat-body-large">Upload brainstorming notes, market
+            research, and competitor research. Ask NotebookLM to identify trends, generate new product ideas, and
+            uncover hidden opportunities.</div>
+        </div><!----><span _ngcontent-ng-c4100353587="" class="cta">Unlock your creative potential.</span><!---->
+      </div><!----><!---->
+    </div>
+  </app-card-grid>
+
+  
+
+  <!-- Minimal JS: gradient animator + lightweight particle canvas -->
+  
+  
+
+
+  <div class="college-marquee">
+  <div class="marquee-track" id="marquee-track">
+    <!-- Repeatable marquee item -->
+    <div class="marquee-item">
+      <figure>
+        <blockquote>
+          <p class="quote">“Learning never exhausts the mind.”</p>
+        </blockquote>
+        <figcaption>
+          <img src="your-image-1.jpg" alt="Portrait of Student" />
+          <div class="person">Leonardo da Vinci</div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="marquee-item">
+      <figure>
+        <blockquote>
+          <p class="quote">“Education is the most powerful weapon.”</p>
+        </blockquote>
+        <figcaption>
+          <img src="your-image-2.jpg" alt="Portrait of Educator" />
+          <div class="person">Nelson Mandela</div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="marquee-item">
+      <figure>
+        <blockquote>
+          <p class="quote">“An investment in knowledge pays the best interest.”</p>
+        </blockquote>
+        <figcaption>
+          <img src="your-image-3.jpg" alt="Portrait of Thinker" />
+          <div class="person">Benjamin Franklin</div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="marquee-item">
+      <figure>
+        <blockquote>
+          <p class="quote">“Dreams Are Not what you See While sleep”</p>
+          <p class="quote">“Dreams Are The thing That Never Let You sleep”</p>
+        </blockquote>
+        <figcaption>
+          <img src="your-image-3.jpg" alt="Portrait of Thinker" />
+          <div class="person">Dr A.P.J Abdul Kalam</div>
+        </figcaption>
+      </figure>
+    </div>
+<div class="marquee-item">
+      <figure>
+        <blockquote>
+          <p class="quote">“An investment in knowledge Is the Biggest investment.”</p>
+          <p class="quote">“That Even Pays Return When You Got Broked By the WORLD.”</p>
+        </blockquote>
+        <figcaption>
+          <img src="your-image-3.jpg" alt="Portrait of Thinker" />
+          <div class="person">Sir Smith Rothschild</div>
+        </figcaption>
+      </figure>
+    </div>
+
+  </div>
+</div>
+
+
+
+<script>
+  // JS to duplicate marquee items dynamically for seamless looping
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("marquee-track");
+  const clone = track.innerHTML;
+  track.innerHTML += clone; // duplicate content
+
+  // Adjust animation speed based on content width
+  const totalWidth = track.scrollWidth / 2; // one set width
+  const speed = 60; // px per second
+  const duration = totalWidth / speed; // seconds
+
+  track.style.animationDuration = `${duration}s`;
+});
+
+  </script>
+
+
+
+
+  <!-- Background -->
+  <div class="blobs"></div>
+  <div class="glow"></div>
+  <div class="noise"></div>
+  <canvas id="particles"></canvas>
+
+
+  
+  <footer>
+            <div class="footer-sections" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                <!-- Connect With Us -->
+
+                <div class="footer-section" style="flex: 1; min-width: 200px;">
+                    <h4>CONNECT WITH US</h4>
+                    <form style="margin-top: 10px;">
+                        <!-- Email Input with validation -->
+                        <input type="email" placeholder="Enter Email ID" required />
+
+                        <!-- Mobile Number Input -->
+                        <input type="tel" placeholder="Enter Mobile Number" pattern="[0-9]{10}"
+                            title="Enter a valid 10-digit mobile number" required />
+
+                        <!-- Message Input -->
+                        <textarea placeholder="Enter your message" rows="4" required></textarea>
+
+                        <button type="submit">→</button>
+                    </form>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="#" class="youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+
+                <!-- Useful Links -->
+                <div class="footer-section" style="flex: 1; min-width: 200px;">
+                    <h4>USEFUL LINKS</h4>
+                    <ul>
+                        <li><a href="https://governor.bih.nic.in/">Rajbhawan, Patna</a></li>
+                        <li><a href="http://ppup.ac.in/">Patliputra University, Patna</a></li>
+                        <li><a href="https://www.ugc.gov.in/">UGC</a></li>
+                        <li><a href="http://naac.gov.in/index.php/en/">NAAC</a></li>
+                        <li><a href="http://rusa.nic.in/">RUSA</a></li>
+                        <big style="size: 20rem; color:  #b9e08d;">Other Links</big>
+
+                        <li><a href="#">Help And Support</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Courses we offer</a></li>
+                        <li><a href="#">E-Waste</a></li>
+                        <li><a href="#"> Opportunity</a></li>
+                    </ul>
+                </div>
+
+                <div class="map">
+                    <h3>Locate Us</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> Opposite Rajendra Nagar Terminal, Kankarbagh Main
+                        Road, Patna, Bihar - 800020</p>
+                        <p>    .    </p> 
+                    <iframe loading="lazy "
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14392.376759674184!2d85.1623249!3d25.6017862!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9c0c5f0fd6bfd704!2sCollege%20of%20Commerce%2C%20Arts%20and%20Science!5e0!3m2!1sen!2sin!4v1596698035870!5m2!1sen!2sin"
+                        allowfullscreen="" aria-hidden="false"></iframe>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © Copyright 2025 <strong> College Of Commerce,Arts & Science</strong>. All rights reserved.
+                <hr>
+                <p><strong>DEVELOPED BY</strong></p>
+            </div>
+
+            <div class="contact-details">
+                <span class="detail">
+                    <i class="icon fas fa-user"></i>
+                    <strong>Sam Sharma</strong>
+                </span>
+                <span class="detail">
+                    <i class="icon fas fa-phone"></i>
+                    <a href="tel:+919525140507">+91 9525140507</a>
+                </span>
+                <span class="detail">
+                    <i class="icon fas fa-envelope"></i>
+                    <a href="mailto:sam140507@gmail.com">sam140507@gmail.com</a>
+                </span>
+            </div>
+            <div class="follow-me">
+
+                <big>Connect With Developer:</big>
+                <div class="social-links">
+                    <!-- Add your own social media links below -->
+                    <a href="#" class="youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+        </footer>
+</body>
+</html>
+
