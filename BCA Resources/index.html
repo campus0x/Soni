@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>campUS-0x</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="overflow-x-hidden">
+
+    <canvas id="particle-canvas"></canvas>
+
+    <div class="relative min-h-screen">
+        <!-- Header -->
+        <header class="container mx-auto px-6 py-6">
+            <nav class="flex items-center justify-between text-slate-200">
+                <div class="flex flex-col">
+                    <h1 class="text-3xl font-black tracking-tighter">College of Commerce, Arts and Science</h1>
+                    <div class="text-xs text-slate-400 tracking-wider">
+                        <span class="font-bold">BCA Department</span>
+                        <span class="hidden sm:inline"> // YOUR HUB FOR BCA EXCELLENCE</span>
+                    </div>
+                </div>
+                
+                <!-- Right-side navigation -->
+                <div>
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#" class="hover:text-sky-400 transition-colors border-b-2 border-sky-400 pb-1">HOME</a>
+                        <a href="#" class="hover:text-sky-400 transition-colors">PYQ</a>
+                        <a href="#" class="hover:text-sky-400 transition-colors">FQ</a>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button class="p-2 rounded-full hover:bg-slate-700/50 transition-colors md:hidden ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-6 text-center">
+            
+            <!-- Hero Section -->
+            <section class="py-20 md:py-32">
+                <h2 class="text-4xl md:text-6xl font-black tracking-wider uppercase text-slate-100">Master Your Degree</h2>
+                <h3 class="text-4xl md:text-6xl font-black tracking-wider uppercase text-sky-400 mt-2">Access All Resources</h3>
+                <div class="mt-10">
+                    <button class="bg-transparent border-2 border-sky-400 text-sky-400 font-bold py-3 px-10 rounded-lg glow-border hover:bg-sky-400 hover:text-slate-900 transition-all duration-300">
+                        EXPLORE BCA RESOURCES
+                    </button>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="py-16">
+                <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-slate-900/50 border border-sky-400/30 rounded-2xl p-6 backdrop-blur-sm card-hover">
+                        <div class="flex justify-center items-center h-16 w-16 bg-slate-800 rounded-lg mx-auto mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-100 mb-2">PDF BOOKS / CHEAT SHEETS</h4>
+                        <p class="text-sm text-slate-400">Foene sa Tot teci turother</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-slate-900/50 border border-sky-400/30 rounded-2xl p-6 backdrop-blur-sm card-hover">
+                         <div class="flex justify-center items-center h-16 w-16 bg-slate-800 rounded-lg mx-auto mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-400" fill="none" viewBox="0 0 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-100 mb-2">intership / scholarship</h4>
+                        <p class="text-sm text-slate-400">Eoxe sot Noa r saur plads</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-slate-900/50 border border-sky-400/30 rounded-2xl p-6 backdrop-blur-sm card-hover">
+                         <div class="flex justify-center items-center h-16 w-16 bg-slate-800 rounded-lg mx-auto mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-400" fill="none" viewBox="0 0 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-100 mb-2">PYQs / syllabus</h4>
+                        <p class="text-sm text-slate-400">Saan hosz e Itogirs</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-slate-900/50 border border-sky-400/30 rounded-2xl p-6 backdrop-blur-sm card-hover">
+                         <div class="flex justify-center items-center h-16 w-16 bg-slate-800 rounded-lg mx-auto mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-400" fill="none" viewBox="0 0 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-100 mb-2">skill-up</h4>
+                        <p class="text-sm text-slate-400">Sonbe w Nchess</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Why Section -->
+            <section class="py-24 text-left">
+                <div class="max-w-2xl">
+                    <!-- Why This Page? -->
+                    <div>
+                        <h3 class="text-3xl font-bold mb-8 text-slate-100">WHY THIS PAGE?</h3>
+                        <ul class="space-y-6">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-400" fill="none" viewBox="0 0 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-200">SAVE TIME</h4>
+                                    <p class="text-slate-400">Find everything you need in one place</p>
+                                </div>
+                            </li>
+                             <li class="flex items-start">
+                                <div class="flex-shrink-0 mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-400" fill="none" viewBox="0 0 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-200">STUDY SMART</h4>
+                                    <p class="text-slate-400">Access high-quality, verified materials</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-400" fill="none" viewBox="0 0 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-200">STAY AHEAD</h4>
+                                    <p class="text-slate-400">br exams with confidence</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
